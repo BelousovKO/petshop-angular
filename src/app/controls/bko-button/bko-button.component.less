@@ -1,0 +1,26 @@
+button {
+  display: flex;
+  gap: 10px;
+  background-color: var(--button-background-color, var(--contrast));
+  border: var(--button-border);
+  border-radius: 4px;
+  padding: 14px 20px;
+  font-size: 14px;
+
+  use {
+    fill: red;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    background-color: var(--light-gray);
+    color: var(--gray);
+
+    use {
+      fill: var(--gray);
+    }
+  }
+}

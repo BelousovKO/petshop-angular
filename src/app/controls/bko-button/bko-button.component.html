@@ -1,0 +1,6 @@
+<button [disabled]="disabled">
+  <svg height="18" width="18" *ngIf="icon" class="icon">
+    <use xlink:href="assets/icons/icons.svg#three-line"></use>
+  </svg>
+  <span *ngIf="text" class="text">{{ text }}</span>
+</button>

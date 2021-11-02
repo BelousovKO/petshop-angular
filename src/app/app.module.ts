@@ -5,8 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { PrimaryButtonComponent } from './controls/primery-button/primary-button.component';
-import { SecondaryButtonComponent } from './controls/secondary-button/secondary-button.component';
+import { BkoButtonComponent } from './controls/bko-button/bko-button.component';
 import { MenuButtonComponent } from './controls/menu-button/menu-button.component';
 import { HeaderSearchComponent } from './controls/header-search/header-search.component';
 
@@ -15,8 +14,7 @@ import { HeaderSearchComponent } from './controls/header-search/header-search.co
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    PrimaryButtonComponent,
-    SecondaryButtonComponent,
+    BkoButtonComponent,
     MenuButtonComponent,
     HeaderSearchComponent
   ],
