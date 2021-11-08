@@ -1,0 +1,24 @@
+bko-button {
+  display: inline-block;
+  --button-border-color: #EAEAEA;
+  --button-border: 1px solid var(--button-border-color);
+
+  &.bko-button-primary {
+    --button-background-color: var(--orange);
+    --button-border-color: var(--orange);
+  }
+
+  &:hover {
+    --button-background-color: var(--light-orange);
+    --button-border-color: var(--light-orange);
+  }
+
+  &:active {
+    --button-background-color: var(--darck-orange);
+    --button-border-color: var(--darck-orange);
+  }
+
+  &.bko-button-header {
+    --button-padding: 14px 20px;
+  }
+}
