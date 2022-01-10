@@ -1,1 +1,10 @@
-<p>header-search works!</p>
+<div class="header-search" [formGroup]="headerSearch">
+  <input placeholder="Хочу найти" formControlName="input" class="header-search__input">
+  <button class="header-search__button" [disabled]="isDisabled()">
+    <span class="header-search__span">
+      <svg width="16" height="16">
+        <use xlink:href="assets/icons/icons.svg#search"></use>
+      </svg>
+    </span>
+  </button>
+</div>

@@ -1,0 +1,27 @@
+.bko-input {
+  span {
+    color: #3d3d3d;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  input {
+    height: 34px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 16px;
+
+    &:hover {
+      border-color: var(--orange);
+    }
+
+    &:focus {
+      background-color: var(--light-orange);
+    }
+
+    &.ng-invalid.ng-touched {
+      border-color: var(--red);
+    }
+  }
+}

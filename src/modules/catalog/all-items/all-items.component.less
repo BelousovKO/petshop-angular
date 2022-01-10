@@ -1,0 +1,34 @@
+.all-items {
+  &__navigation-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__navigation-item {
+    display: flex;
+    height: 98px;
+
+    &--dog {
+      background-image: url(../../../assets/images/dogs.svg);
+      background-color: var(--light-orange);
+    }
+
+    &--cat {
+      background-image: url(../../../assets/images/cats.svg);
+      background-color: var(--light-red);
+    }
+  }
+
+  &__navigation-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+  }
+}

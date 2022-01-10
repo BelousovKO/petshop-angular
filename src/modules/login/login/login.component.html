@@ -1,8 +1,15 @@
-<form ngForm="login-form">
-  <label>Логин
-    <input formControlName="login">
+<form [formGroup]="loginForm" class="login-form" (submit)="onSubmit()">
+  <label class="login-form__input bko-input">
+    <span>Логин</span>
+    <input formControlName="login" type="text" minlength="4" maxlength="16">
   </label>
-  <label>Пароль
-    <input formControlName="password">
+  <label class="login-form__input bko-input">
+    <span>Пароль</span>
+    <bko-password formControlName="password" minlength="4"></bko-password>
   </label>
+  <div class="login-form__buttons">
+    <bko-button [disabled]="loginForm.invalid" text="Войти" class="bko-button-primary"></bko-button>
+    <bko-button text="Отмена" class="bko-button-secondary" routerLink="/catalog"></bko-button>
+  </div>
 </form>
+

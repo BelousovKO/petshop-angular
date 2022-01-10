@@ -3,14 +3,17 @@ import { CommonModule } from '@angular/common';
 import {BkoButtonComponent} from "./bko-button/bko-button.component";
 import {HeaderSearchComponent} from "./header-search/header-search.component";
 import {MenuButtonComponent} from "./menu-button/menu-button.component";
+import { BkoPasswordComponent } from './bko-password/bko-password.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
-
+const COMPONENTS = [BkoButtonComponent, HeaderSearchComponent, MenuButtonComponent, BkoPasswordComponent]
 
 @NgModule({
-  declarations: [BkoButtonComponent, HeaderSearchComponent, MenuButtonComponent],
+  declarations: COMPONENTS,
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
-  exports :[BkoButtonComponent, HeaderSearchComponent, MenuButtonComponent]
+  exports :COMPONENTS
 })
 export class ControlsModule { }

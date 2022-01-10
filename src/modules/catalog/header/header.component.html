@@ -1,1 +1,59 @@
-<p>header works!</p>
+<div class="app-header">
+  <div class="app-header__main limiter">
+    <svg width="88" height="73" routerLink="/catalog" class="app-header__logo" *ngIf="isDesktop()">
+      <use xlink:href="assets/icons/icons.svg#logo"></use>
+    </svg>
+    <svg width="72" height="48" routerLink="/catalog" class="app-header__small-logo" *ngIf="!isDesktop()">
+      <use xlink:href="assets/icons/icons.svg#small-logo"></use>
+    </svg>
+    <div>
+      <app-header-search></app-header-search>
+    </div>
+    <div class="app-header__navigation">
+      <ul class="app-header__navigation-list" *ngIf="isDesktop()">
+        <li class="app-header__navigation-item"
+            routerLink="/catalog/bonus"
+            routerLinkActive="app-header__navigation-item--active">
+          <svg width="32" height="33">
+            <use xlink:href="assets/icons/icons.svg#bonus"></use>
+          </svg>
+          <span class="app-header__link">Бонусы</span>
+        </li>
+        <li class="app-header__navigation-item"
+            routerLink="/catalog/order"
+            routerLinkActive="app-header__navigation-item--active">
+          <svg width="30" height="33">
+            <use xlink:href="assets/icons/icons.svg#order"></use>
+          </svg>
+          <span class="app-header__link">Заказы</span>
+        </li>
+        <li class="app-header__navigation-item" routerLink="/login">
+          <svg width="32" height="33">
+            <use xlink:href="assets/icons/icons.svg#stock"></use>
+          </svg>
+          <span class="app-header__link">Админ</span>
+        </li>
+        <li class="app-header__navigation-item"
+            routerLink="/catalog/inBox"
+            routerLinkActive="app-header__navigation-item--active">
+          <svg width="32" height="33">
+            <use xlink:href="assets/icons/icons.svg#box"></use>
+          </svg>
+          <span class="app-header__link">{{ boxNavigation }}</span>
+        </li>
+      </ul>
+      <bko-button
+        *ngIf="isShowButtonInMenu()"
+        icon="three-line"
+        class="bko-button-primary bko-button-header"
+        routerLink="/catalog/menu"
+      ></bko-button>
+      <bko-button
+        *ngIf="isSowButtonOutMenu()"
+        icon="close"
+        class="bko-button-primary bko-button-header"
+        routerLink="/catalog"
+      ></bko-button>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<button [disabled]="disabled" [class.bko-button-icon]="icon">
+<button [disabled]="disabled" [class.bko-button-icon]="icon && text">
   <svg height="18" width="18" *ngIf="icon" class="icon">
     <use [attr.xlink:href]="svgHref"></use>
   </svg>

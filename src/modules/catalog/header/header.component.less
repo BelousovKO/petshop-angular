@@ -1,0 +1,52 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background-color: var(--contrast);
+
+  &__navigation {
+    display: flex;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__logo,
+  &__small-logo {
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__navigation-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__navigation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    &--active {
+      .app-header__link {
+        color: var(--orange);
+      }
+    }
+  }
+
+  &__navigation-item:hover {
+    .app-header__link {
+      color: var(--light-orange);
+    }
+  }
+}

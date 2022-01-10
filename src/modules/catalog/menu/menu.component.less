@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 10vh;
+
+  &__navigation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__navigation-item:hover {
+    .menu__link {
+      color: var(--light-orange);
+    }
+  }
+}

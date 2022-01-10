@@ -18,5 +18,4 @@ export class BkoButtonComponent implements OnInit {
   ngOnInit(): void {
     this.svgHref = `assets/icons/icons.svg#${this.icon}`;
   }
-
 }
